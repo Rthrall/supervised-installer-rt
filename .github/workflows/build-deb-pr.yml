@@ -1,9 +1,10 @@
 name: Build Test Deb Package
 
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
+  release:
+    types: ["published"]
+    
 jobs:
   build-test-deb-package:
     runs-on: ubuntu-latest

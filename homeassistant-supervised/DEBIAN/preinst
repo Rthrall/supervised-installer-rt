@@ -17,7 +17,7 @@ if [[ $CURRENT_OS != *"Debian GNU/Linux 11 (bullseye)"* ]]; then
 # Strip first feild of string
     CURRENT_OS=$(echo $CURRENT_OS | cut -d' ' -f2-)
     if [[ $BYPASS_OS_CHECK != "true" ]]; then
-        error "${CURRENT_OS} is not supported!"
+        warn "${CURRENT_OS} is not supported!"
     fi
     warn "Bypassing OS check..."
     warn "${CURRENT_OS} is not supported!"
